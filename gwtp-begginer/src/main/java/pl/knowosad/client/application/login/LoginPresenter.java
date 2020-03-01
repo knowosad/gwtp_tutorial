@@ -8,7 +8,9 @@ import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.NoGatekeeper;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
+import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
+import com.gwtplatform.mvp.shared.proxy.PlaceRequest;
 import pl.knowosad.client.CurrentUser;
 import pl.knowosad.client.application.ApplicationPresenter;
 import pl.knowosad.client.place.NameTokens;
@@ -31,13 +33,13 @@ public class LoginPresenter extends Presenter<LoginPresenter.MyView, LoginPresen
 
   private CurrentUser currentUser;
 
+  private final PlaceManager placeManager;
+
   @Inject
-  LoginPresenter(
-      EventBus eventBus,
-      MyView view,
-      MyProxy proxy,
-      CurrentUser currentUser) {
+  LoginPresenter(EventBus eventBus, MyView view, MyProxy proxy, CurrentUser currentUser, PlaceManager placeManager) {
     super(eventBus, view, proxy, ApplicationPresenter.SLOT_MAIN);
+    this.currentUser = currentUser;
+    this.placeManager = placeManager;
 
     getView().setUiHandlers(this);
   }
@@ -47,7 +49,10 @@ public class LoginPresenter extends Presenter<LoginPresenter.MyView, LoginPresen
     if (validateCredentials(username, password)) {
       currentUser.setLoggedIn(true);
 
-      // TODO: Navigate to the HomePresenter
+      PlaceRequest placeRequest = new PlaceRequest.Builder()
+          .nameToken(NameTokens.HOME)
+          .build();
+      placeManager.revealPlace(placeRequest);
     }
   }
 
