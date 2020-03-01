@@ -2,8 +2,10 @@
         xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 
     <g:HTMLPanel>
-        
-        <p>Hello world!</p>
+
+        <g:TextBox ui:field="nameField"/>
+        <g:Button ui:field="sendButton">Submit</g:Button>
+        <g:TextArea ui:field="resultField"/>
         
     </g:HTMLPanel>
 </ui:UiBinder>
