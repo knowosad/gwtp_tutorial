@@ -1,6 +1,7 @@
 package pl.knowosad.client;
 
-import com.google.gwt.event.shared.EventBus;
+//import com.google.gwt.event.shared.EventBus;
+import com.google.web.bindery.event.shared.EventBus;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HasHandlers;
 
