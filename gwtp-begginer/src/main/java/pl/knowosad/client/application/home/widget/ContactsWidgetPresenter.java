@@ -27,9 +27,10 @@ public class ContactsWidgetPresenter extends PresenterWidget<ContactsWidgetPrese
   private RestDispatch dispatch;
 
   @Inject
-  public ContactsWidgetPresenter(EventBus eventBus, MyView view, RestDispatch dispatch) {
+  public ContactsWidgetPresenter(EventBus eventBus, MyView view, RestDispatch dispatch, ContactResource contactResource) {
     super(eventBus, view);
     this.dispatch = dispatch;
+    this.contactResource = contactResource;
 
     getView().setUiHandlers(this);
   }

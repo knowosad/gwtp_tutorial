@@ -10,8 +10,12 @@ import pl.knowosad.client.resources.ResourceLoader;
 public class ClientModule extends AbstractPresenterModule {
   @Override
   protected void configure() {
-    install(new DefaultModule.Builder().defaultPlace(NameTokens.LOGIN).errorPlace(NameTokens.LOGIN)
-        .unauthorizedPlace(NameTokens.LOGIN).build());
+    install(new DefaultModule
+        .Builder()
+        .defaultPlace(NameTokens.LOGIN)
+        .errorPlace(NameTokens.LOGIN)
+        .unauthorizedPlace(NameTokens.LOGIN)
+        .build());
     //        install(new DefaultModule
     //                .Builder()
     //                .defaultPlace(NameTokens.HOME)

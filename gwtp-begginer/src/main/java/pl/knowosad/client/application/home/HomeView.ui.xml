@@ -10,6 +10,7 @@
         <g:TextArea ui:field="resultField"/>
         <br/>
         <g:SimplePanel ui:field="contactPanel"/>
+        <br/>
         
     </g:HTMLPanel>
 </ui:UiBinder>

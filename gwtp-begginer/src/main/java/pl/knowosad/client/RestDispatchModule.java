@@ -11,6 +11,6 @@ public class RestDispatchModule extends AbstractGinModule {
         new RestDispatchAsyncModule.Builder();
     install(dispatchBuilder.build());
 
-    bindConstant().annotatedWith(RestApplicationPath.class).to("/");  //TODO
+    bindConstant().annotatedWith(RestApplicationPath.class).to("http://127.0.0.1:8080");
   }
 }

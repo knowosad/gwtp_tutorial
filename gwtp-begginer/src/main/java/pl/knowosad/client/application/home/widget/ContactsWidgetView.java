@@ -1,7 +1,9 @@
 package pl.knowosad.client.application.home.widget;
 
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
@@ -32,5 +34,10 @@ public class ContactsWidgetView extends ViewWithUiHandlers<ContactsWidgetUiHandl
   @Override
   public void setContactsField(String text) {
     contactsField.setText(text);
+  }
+
+  @UiHandler("getContacts")
+  void getContacts(ClickEvent event) {
+    getUiHandlers().fetchContacts();
   }
 }

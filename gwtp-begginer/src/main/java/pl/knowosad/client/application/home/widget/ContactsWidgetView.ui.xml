@@ -4,6 +4,9 @@
     <g:HTMLPanel>
 
         <p>Welcome inside Contacts Widget</p>
+        <br/>
+        <g:Button ui:field="getContacts">Get Contacts</g:Button>
+        <br/>
         <g:TextArea ui:field="contactsField" title="Contacts Widget"/>
 
     </g:HTMLPanel>
