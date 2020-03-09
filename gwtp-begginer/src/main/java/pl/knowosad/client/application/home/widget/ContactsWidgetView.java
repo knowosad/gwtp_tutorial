@@ -40,4 +40,9 @@ public class ContactsWidgetView extends ViewWithUiHandlers<ContactsWidgetUiHandl
   void getContacts(ClickEvent event) {
     getUiHandlers().fetchContacts();
   }
+
+  @UiHandler("getContactsList")
+  void getContactsList(ClickEvent event) {
+    getUiHandlers().getContacts();
+  }
 }

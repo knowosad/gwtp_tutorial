@@ -1,6 +1,7 @@
-package pl.knowosad.client;
+package pl.knowosad.client.api;
 
 import com.gwtplatform.dispatch.rest.shared.RestAction;
+import pl.knowosad.client.Contact;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -16,4 +17,9 @@ public interface ContactResource {
 
   @GET
   RestAction<List<Contact>> getContacts();
+
+  @GET
+  List<Contact> getContactsList();
+
+
 }
