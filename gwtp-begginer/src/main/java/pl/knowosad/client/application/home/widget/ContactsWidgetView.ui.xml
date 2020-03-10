@@ -1,0 +1,14 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+
+        <p>Welcome inside Contacts Widget</p>
+        <br/>
+        <g:Button ui:field="getContacts">Get Contacts</g:Button>
+        <g:Button ui:field="getContactsList">Get Contacts List</g:Button>
+        <br/>
+        <g:TextArea ui:field="contactsField" title="Contacts Widget"/>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

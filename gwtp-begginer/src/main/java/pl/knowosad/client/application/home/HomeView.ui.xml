@@ -4,8 +4,13 @@
     <g:HTMLPanel>
 
         <g:TextBox ui:field="nameField"/>
+        <br/>
         <g:Button ui:field="sendButton">Submit</g:Button>
+        <br/>
         <g:TextArea ui:field="resultField"/>
+        <br/>
+        <g:SimplePanel ui:field="contactPanel"/>
+        <br/>
         
     </g:HTMLPanel>
 </ui:UiBinder>

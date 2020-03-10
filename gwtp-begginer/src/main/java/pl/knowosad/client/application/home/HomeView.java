@@ -4,6 +4,7 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
@@ -22,9 +23,14 @@ public class HomeView extends ViewWithUiHandlers<HomePresenter> implements HomeP
     @UiField
     TextArea resultField;
 
+    @UiField
+    SimplePanel contactPanel;
+
     @Inject
     HomeView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
+
+        bindSlot(HomePresenter.SLOT_CONTACTS, contactPanel);
     }
 
     @UiHandler("sendButton")
